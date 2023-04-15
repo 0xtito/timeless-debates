@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Adam Smith",
+    "serverName": "adam_smith",
+    "image": "adam-smith-Enhanced.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Epictetus",
+    "serverName": "epictetus",
+    "image": "epictetus-Enhanced.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Friedrich Nietzsche",
+    "serverName": "friedrich_wilhelm_nietzsche",
+    "image": "nietzsche-Enhanced.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Immanuel Kant",
+    "serverName": "immanuel_kant",
+    "image": "immanuel_kant-Enhanced.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Jean Jacques Rousseau",
+    "serverName": "jean_jacques_rousseau",
+    "image": "rousseau-Enhanced.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Karl Marx",
+    "serverName": "karl_marx",
+    "image": "marx-Enhanced.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Marcus Aurelius",
+    "serverName": "marcus_aurelius",
+    "image": "marcus_aurelius.webp"
+  },
+  {
+    "id": 8,
+    "name": "Plato",
+    "serverName": "plato",
+    "image": "plato-Enhanced.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Niccólo Machiavelli",
+    "serverName": "niccolo_machiavelli",
+    "image": "machiavelli.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rene Descartes",
+    "serverName": "rene_descartes",
+    "image": "descartes-Enhanced.jpeg"
+  }
+]
