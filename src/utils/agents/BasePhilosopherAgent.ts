@@ -22,6 +22,13 @@ export class PhilosopherPromptTemplate extends BaseChatPromptTemplate {
   tools: Tool[];
   private prefix: string;
 
+  /**
+   *
+   * @param args tools - the tools that the agent will use to search through the vector stores
+   * @param args inputVariables - the variables that the agent will use to search through the vector stores
+   * @param args agentName - the name of the philosopher who the agent will be imitating (e.g. plato, karl_marx)
+   * @param args otherAgentName - the name of the philosopher who the agent will be debating with (e.g. plato, karl_marx)
+   */
   constructor(args: {
     tools: Tool[];
     inputVariables: string[];
@@ -39,7 +46,14 @@ export class PhilosopherPromptTemplate extends BaseChatPromptTemplate {
 
     const [authorName, prompt] = authorAndPrompt;
 
-    this.prefix = prompt.replace("{{opp_name}}", args.otherAgentName);
+    const authorFullName = args.otherAgentName.includes("_")
+      ? args.otherAgentName
+          .split("_")
+          .map((word) => word[0].toUpperCase() + word.slice(1))
+          .join(" ")
+      : args.otherAgentName;
+
+    this.prefix = prompt.replace("{{opp_name}}", authorFullName);
   }
 
   _getPromptType(): string {

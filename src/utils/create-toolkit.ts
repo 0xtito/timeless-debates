@@ -29,8 +29,6 @@ Question or Statement: {input}
  */
 
 export function createToolkit(
-  philosopherVectorstore: SupabaseVectorStore,
-  contextVectorstore: SupabaseVectorStore,
   philosopher: string,
   onTokenStream?: (token: string) => void
 ) {

@@ -24,7 +24,10 @@ import {
  *
  */
 
-export async function createAgent(philosopher: string) {
+export async function createAgent(
+  philosopher: string,
+  otherPhilosopher: string
+) {
   const authorAndPrompt = Object.entries(authorPrefixPrompts).find(
     ([author, prompt]) => author === philosopher
   );
@@ -35,28 +38,10 @@ export async function createAgent(philosopher: string) {
 
   console.log("retrieving vector stores...");
 
-  const philosopherVectorStore = await SupabaseVectorStore.fromExistingIndex(
-    new OpenAIEmbeddings(),
-    {
-      client: supabase,
-      tableName: authorName,
-    }
-  );
-
-  const contextVectorStore = await SupabaseVectorStore.fromExistingIndex(
-    new OpenAIEmbeddings(),
-    {
-      client: supabase,
-      tableName: "articles",
-    }
-  );
-
   console.log("retrieved vector stores");
 
   console.log("creating toolkit...");
   const tools = createToolkit(
-    philosopherVectorStore,
-    contextVectorStore,
     authorName
     // (token: string) => {
     //   console.log(token);
@@ -88,7 +73,7 @@ export async function createAgent(philosopher: string) {
       tools,
       inputVariables: ["input", "agent_scratchpad"],
       agentName: authorName,
-      otherAgentName: "Adam Smith",
+      otherAgentName: otherPhilosopher,
     }),
     llm: openai,
   });
