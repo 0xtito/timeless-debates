@@ -1,5 +1,5 @@
 import React from "react";
-import philosophersData from "../../../public/philosophers/index.json";
+import philosophersContent from "@/../public/philosophers/index.json";
 import { Philosopher as PhilosopherData } from "@/types";
 import Philosopher from "./Philosopher";
 
@@ -16,7 +16,7 @@ const PhilosopherGrid: React.FC<PhilosopherGridProps> = ({
 }) => {
   return (
     <div className="grid grid-cols-5 gap-1 mx-0">
-      {philosophersData.map((philosopher: PhilosopherData) => (
+      {philosophersContent.map((philosopher: PhilosopherData) => (
         <Philosopher
           key={philosopher.id}
           philosopher={philosopher}
