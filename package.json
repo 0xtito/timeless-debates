@@ -6,20 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ingest-data": "tsx -r dotenv/config src/utils/ingest-book-data.ts",
+    "ingest-context": "tsx -r dotenv/config src/scripts/startContextIngestion.ts",
+    "ask-q": "tsx -r dotenv/config src/scripts/philosopherQA.ts"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.20.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "apify-client": "^2.7.1",
     "autoprefixer": "10.4.14",
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "epub2": "^3.0.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "framer-motion": "^10.12.2",
+    "html-to-text": "^9.0.5",
+    "langchain": "^0.0.56",
     "next": "13.3.0",
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "serpapi": "^1.1.1",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "tsx": "^3.12.6"
   }
 }
