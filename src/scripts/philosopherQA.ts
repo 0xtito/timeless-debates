@@ -3,8 +3,9 @@ import { createAgent } from "@/utils/create-custom-agent";
 
 (async function main() {
   const philosopher = "plato";
+  const otherPhilosopher = "epictetus";
   console.log("Creating agent...");
-  const agent1 = await createAgent(philosopher);
+  const agent1 = await createAgent(philosopher, otherPhilosopher);
   if (!agent1) {
     throw new Error("Could not create agent");
   }
