@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">40</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">ddab5856-67c7-42a5-b3ec-1c0eae0232a5</dc:identifier>
+        <dc:title>Meno</dc:title>
+        <dc:creator opf:file-as="Plato" opf:role="aut">Plato</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1999-02-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Classical literature</dc:subject>
+        <dc:subject>Socrates</dc:subject>
+        <dc:subject>470 BC-399 BC</dc:subject>
+        <dc:subject>Ethics -- Early works to 1800</dc:subject>
+        <dc:subject>Virtue -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:46:01.890029+00:00"/>
+        <meta name="calibre:title_sort" content="Meno"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Meno - Plato.jpg"/>
+    </guide>
+</package>

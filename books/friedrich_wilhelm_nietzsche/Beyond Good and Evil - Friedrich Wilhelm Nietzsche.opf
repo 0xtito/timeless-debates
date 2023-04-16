@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">11</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">f3dd4361-4889-472e-b7e2-f9ed419a6dc1</dc:identifier>
+        <dc:title>Beyond Good and Evil</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2003-08-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics</dc:subject>
+        <dc:subject>Philosophy</dc:subject>
+        <dc:subject>German</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:29:24.970878+00:00"/>
+        <meta name="calibre:title_sort" content="Beyond Good and Evil"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Beyond Good and Evil - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

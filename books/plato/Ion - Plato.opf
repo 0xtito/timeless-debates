@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">38</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">d9e5a33d-0191-4f17-af3e-82bfa4392d05</dc:identifier>
+        <dc:title>Ion</dc:title>
+        <dc:creator opf:file-as="Plato" opf:role="aut">Plato</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1999-02-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Classical literature</dc:subject>
+        <dc:subject>Homer. Iliad</dc:subject>
+        <dc:subject>Poetics -- History -- To 1500</dc:subject>
+        <dc:subject>Aesthetics</dc:subject>
+        <dc:subject>Ancient</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:45:45.578667+00:00"/>
+        <meta name="calibre:title_sort" content="Ion"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Ion - Plato.jpg"/>
+    </guide>
+</package>

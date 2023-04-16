@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">18</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">c70fa8e2-5123-419f-a1b4-72c96b88be3b</dc:identifier>
+        <dc:title>The Joyful Wisdom ("La Gaya Scienza")</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-08-23T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Philosophy</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:33:47.718867+00:00"/>
+        <meta name="calibre:title_sort" content="Joyful Wisdom (&quot;La Gaya Scienza&quot;), The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Joyful Wisdom (_La Gaya Scienza_), The - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

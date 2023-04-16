@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">52</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">f3120bf5-9094-475e-8620-8b47bc96d9b9</dc:identifier>
+        <dc:title>Six metaphysical meditations /</dc:title>
+        <dc:creator opf:file-as="Descartes, René" opf:role="aut">René Descartes</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2023-02-20T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Knowledge</dc:subject>
+        <dc:subject>Theory of</dc:subject>
+        <dc:subject>Metaphysics</dc:subject>
+        <dc:subject>First philosophy</dc:subject>
+        <dc:subject>God -- Proof</dc:subject>
+        <dc:subject>Ontological</dc:subject>
+        <dc:subject>Methodology</dc:subject>
+        <dc:subject>Descartes</dc:subject>
+        <dc:subject>René</dc:subject>
+        <dc:subject>1596-1650</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T16:15:29.826477+00:00"/>
+        <meta name="calibre:title_sort" content="Six metaphysical meditations /"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Six metaphysical meditations _ - René Descartes.jpg"/>
+    </guide>
+</package>

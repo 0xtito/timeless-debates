@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">14</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">fe1ae0b0-b928-4487-9c08-e413cc6c0d2d</dc:identifier>
+        <dc:title>The Will to Power: An Attempted Transvaluation of All Values. Book I and II</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-08-28T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Values</dc:subject>
+        <dc:subject>Nihilism (Philosophy)</dc:subject>
+        <dc:subject>Power (Philosophy)</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:29:45.637575+00:00"/>
+        <meta name="calibre:title_sort" content="Will to Power: An Attempted Transvaluation of All Values. Book I and II, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Will to Power_ An Attempted Transvaluation of All Values. Book I and II, The - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

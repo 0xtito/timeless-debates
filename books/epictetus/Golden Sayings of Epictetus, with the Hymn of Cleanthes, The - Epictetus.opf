@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">48</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">ca1576f9-a0df-4099-b0dd-77c4f9234db0</dc:identifier>
+        <dc:title>The Golden Sayings of Epictetus, with the Hymn of Cleanthes</dc:title>
+        <dc:creator opf:file-as="Epictetus" opf:role="aut">Epictetus</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2006-02-05T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Philosophy</dc:subject>
+        <dc:subject>Stoics</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T16:10:03.497138+00:00"/>
+        <meta name="calibre:title_sort" content="Golden Sayings of Epictetus, with the Hymn of Cleanthes, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Golden Sayings of Epictetus, with the Hymn of Cleanthes, The - Epictetus.jpg"/>
+    </guide>
+</package>

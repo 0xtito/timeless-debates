@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">17</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">9248ad7c-d20f-489b-ab32-cf08db444866</dc:identifier>
+        <dc:title>Early Greek Philosophy &amp; Other Essays / Collected Works, Volume Two</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-03-25T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Philosophy</dc:subject>
+        <dc:subject>Ancient</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:33:03.411132+00:00"/>
+        <meta name="calibre:title_sort" content="Early Greek Philosophy &amp; Other Essays / Collected Works, Volume Two"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Early Greek Philosophy &amp; Other Essays _ Collected Works, Volume Two - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

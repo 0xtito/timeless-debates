@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">58</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">907066e6-e26f-413c-9af1-91c3a018eed3</dc:identifier>
+        <dc:title>History of Florence and of the Affairs of Italy / From the Earliest Times to the Death of Lorenzo the Magnificent</dc:title>
+        <dc:creator opf:file-as="Machiavelli, Niccolò" opf:role="aut">Niccolò Machiavelli</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2006-03-30T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Florence (Italy) -- History</dc:subject>
+        <dc:subject>Italy -- Politics and government</dc:subject>
+        <dc:subject>Italy -- History -- 476-1492</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-13T02:24:16.596058+00:00"/>
+        <meta name="calibre:title_sort" content="History of Florence and of the Affairs of Italy / From the Earliest Times to the Death of Lorenzo the Magnificent"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="History of Florence and of the Affairs of Italy _ From the Earls to the Death of Lorenzo the Magnificent - Niccolò Machiavelli.jpg"/>
+    </guide>
+</package>

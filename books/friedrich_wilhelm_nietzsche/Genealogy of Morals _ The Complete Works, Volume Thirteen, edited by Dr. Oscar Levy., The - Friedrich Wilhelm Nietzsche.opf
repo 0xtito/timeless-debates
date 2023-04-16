@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">12</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">b9593579-41c2-4eae-abfe-c779614b04f4</dc:identifier>
+        <dc:title>The Genealogy of Morals / The Complete Works, Volume Thirteen, edited by Dr. Oscar Levy.</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2016-06-13T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:29:29.230103+00:00"/>
+        <meta name="calibre:title_sort" content="Genealogy of Morals / The Complete Works, Volume Thirteen, edited by Dr. Oscar Levy., The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Genealogy of Morals _ The Complete Works, Volume Thirteen, edited by Dr. Oscar Levy., The - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

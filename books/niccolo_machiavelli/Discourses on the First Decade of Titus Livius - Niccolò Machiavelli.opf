@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">59</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">466d4ff8-1b75-4796-8dd4-4e4ca16e55d4</dc:identifier>
+        <dc:title>Discourses on the First Decade of Titus Livius</dc:title>
+        <dc:creator opf:file-as="Machiavelli, Niccolò" opf:role="aut">Niccolò Machiavelli</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2004-01-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Political science -- Early works to 1800</dc:subject>
+        <dc:subject>Livy. Ab urbe condita</dc:subject>
+        <dc:subject>Rome -- Historiography</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-13T02:24:24.408189+00:00"/>
+        <meta name="calibre:title_sort" content="Discourses on the First Decade of Titus Livius"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Discourses on the First Decade of Titus Livius - Niccolò Machiavelli.jpg"/>
+    </guide>
+</package>

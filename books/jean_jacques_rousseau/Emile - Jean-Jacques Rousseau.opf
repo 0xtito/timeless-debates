@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">43</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">e801fd3f-3f13-4acb-95b7-f75c2de35ee6</dc:identifier>
+        <dc:title>Emile</dc:title>
+        <dc:creator opf:file-as="Rousseau, Jean-Jacques" opf:role="aut">Jean-Jacques Rousseau</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2004-04-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Education -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:54:55.594607+00:00"/>
+        <meta name="calibre:title_sort" content="Emile"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Emile - Jean-Jacques Rousseau.jpg"/>
+    </guide>
+</package>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">7</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">2f018414-0ab1-4caf-aa9f-cc52584f67fa</dc:identifier>
+        <dc:title>Value, price and profit</dc:title>
+        <dc:creator opf:file-as="Marx, Karl, 1818-1883 &amp; Aveling, Eleanor Marx, 1855-1898, ed" opf:role="aut">Marx, Karl, 1818-1883</dc:creator>
+        <dc:creator opf:file-as="Marx, Karl, 1818-1883 &amp; Aveling, Eleanor Marx, 1855-1898, ed" opf:role="aut">Aveling, Eleanor Marx, 1855-1898, ed</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1913-04-15T00:00:00+00:00</dc:date>
+        <dc:description>Preface by Edward Aveling</dc:description>
+        <dc:publisher>Chicago, C. H. Kerr</dc:publisher>
+        <dc:identifier opf:scheme="ACCESS URL">http://www.archive.org/details/valuepriceprofit00marx</dc:identifier>
+        <dc:identifier opf:scheme="ARK">ark:/13960/t7gq7696c</dc:identifier>
+        <dc:identifier opf:scheme="OCLC">record:1102235971</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Economics</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:19:00.486551+00:00"/>
+        <meta name="calibre:title_sort" content="Value, price and profit"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Value, price and profit - Marx, Karl, 1818-1883 &amp; Aveling, Eleanor Marx, 1855-1898, ed.jpg"/>
+    </guide>
+</package>

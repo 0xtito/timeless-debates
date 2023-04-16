@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">8</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">bcfad712-025d-40b4-940d-39bb006395dc</dc:identifier>
+        <dc:title>The Theory of Moral Sentiments / Or, an Essay Towards an Analysis of the Principles by Which Men Naturally Judge Concerning the Conduct and Character, First of Their Neighbours, and Afterwards of Themselves. to Which Is Added, a Dissertation on the Origin of Languages.</dc:title>
+        <dc:creator opf:file-as="Smith, Adam" opf:role="aut">Adam Smith</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2022-02-09T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics -- Early works to 1800</dc:subject>
+        <dc:subject>Language and languages -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:20:08.486232+00:00"/>
+        <meta name="calibre:title_sort" content="Theory of Moral Sentiments / Or, an Essay Towards an Analysis of the Principles by Which Men Naturally Judge Concerning the Conduct and Character, First of Their Neighbours, and Afterwards of Themselves. to Which Is Added, a Dissertation on the Origin of Languages., The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Theory of Moral Sentiments _ Or, an Essay Towards an Analysis od, a Dissertation on the Origin of Languages., The - Adam Smith.jpg"/>
+    </guide>
+</package>

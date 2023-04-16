@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">60</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">9a77c5b7-7cee-4384-bbbb-21f38a9260e5</dc:identifier>
+        <dc:title>Machiavelli, Volume I</dc:title>
+        <dc:creator opf:file-as="Machiavelli, Niccolò" opf:role="aut">Niccolò Machiavelli</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2005-05-06T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Florence (Italy) -- History</dc:subject>
+        <dc:subject>Military art and science -- Early works to 1800</dc:subject>
+        <dc:subject>Political science -- Early works to 1800</dc:subject>
+        <dc:subject>Political ethics</dc:subject>
+        <dc:subject>War -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-13T02:24:28.186449+00:00"/>
+        <meta name="calibre:title_sort" content="Machiavelli, Volume I"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Machiavelli, Volume I - Niccolò Machiavelli.jpg"/>
+    </guide>
+</package>

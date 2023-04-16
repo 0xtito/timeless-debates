@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">22</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">062e532e-3070-4640-8807-d4cf874f82f9</dc:identifier>
+        <dc:title>The Critique of Pure Reason</dc:title>
+        <dc:creator opf:file-as="Kant, Immanuel" opf:role="aut">Immanuel Kant</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2003-07-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Knowledge</dc:subject>
+        <dc:subject>Theory of</dc:subject>
+        <dc:subject>Causation</dc:subject>
+        <dc:subject>Reason</dc:subject>
+        <dc:subject>Philosophy</dc:subject>
+        <dc:subject>German</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:40:55.770866+00:00"/>
+        <meta name="calibre:title_sort" content="Critique of Pure Reason, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Critique of Pure Reason, The - Immanuel Kant.jpg"/>
+    </guide>
+</package>

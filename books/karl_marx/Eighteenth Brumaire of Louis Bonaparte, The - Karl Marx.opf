@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">21</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">79ef3afa-568d-4b53-b874-17ee6dea9769</dc:identifier>
+        <dc:title>The Eighteenth Brumaire of Louis Bonaparte</dc:title>
+        <dc:creator opf:file-as="Marx, Karl" opf:role="aut">Karl Marx</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2006-02-19T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>France -- History -- Second Republic</dc:subject>
+        <dc:subject>1848-1852</dc:subject>
+        <dc:subject>France -- History -- Coup d'état</dc:subject>
+        <dc:subject>1851</dc:subject>
+        <dc:subject>France -- History -- February Revolution</dc:subject>
+        <dc:subject>1848</dc:subject>
+        <dc:subject>France -- Politics and government -- 1848-1852</dc:subject>
+        <dc:subject>Napoleon III</dc:subject>
+        <dc:subject>Emperor of the French</dc:subject>
+        <dc:subject>1808-1873</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:36:26.585321+00:00"/>
+        <meta name="calibre:title_sort" content="Eighteenth Brumaire of Louis Bonaparte, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Eighteenth Brumaire of Louis Bonaparte, The - Karl Marx.jpg"/>
+    </guide>
+</package>

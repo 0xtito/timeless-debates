@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">33</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">35b3d2e7-1b25-45d7-8598-b67fd2eb0fa3</dc:identifier>
+        <dc:title>Phaedo</dc:title>
+        <dc:creator opf:file-as="Plato" opf:role="aut">Plato</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1999-03-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Classical literature</dc:subject>
+        <dc:subject>Immortality (Philosophy) -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:44:31.066448+00:00"/>
+        <meta name="calibre:title_sort" content="Phaedo"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Phaedo - Plato.jpg"/>
+    </guide>
+</package>

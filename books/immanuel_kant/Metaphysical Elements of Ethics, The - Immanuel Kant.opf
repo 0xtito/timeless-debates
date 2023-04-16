@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">28</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">1d0f5a0e-0f62-416f-9e31-0378b4f767c3</dc:identifier>
+        <dc:title>The Metaphysical Elements of Ethics</dc:title>
+        <dc:creator opf:file-as="Kant, Immanuel" opf:role="aut">Immanuel Kant</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2004-05-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics</dc:subject>
+        <dc:subject>Philosophy</dc:subject>
+        <dc:subject>German</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:42:48.281894+00:00"/>
+        <meta name="calibre:title_sort" content="Metaphysical Elements of Ethics, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Metaphysical Elements of Ethics, The - Immanuel Kant.jpg"/>
+    </guide>
+</package>

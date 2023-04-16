@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">19</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">9005683a-a948-41a7-b74b-7635d72b6916</dc:identifier>
+        <dc:title>The Dawn of Day</dc:title>
+        <dc:creator opf:file-as="Nietzsche, Friedrich Wilhelm" opf:role="aut">Friedrich Wilhelm Nietzsche</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-06-09T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics</dc:subject>
+        <dc:subject>Prejudices</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:35:11.762552+00:00"/>
+        <meta name="calibre:title_sort" content="Dawn of Day, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Dawn of Day, The - Friedrich Wilhelm Nietzsche.jpg"/>
+    </guide>
+</package>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">9</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">73505d31-9ff9-4b21-a734-518466a2a320</dc:identifier>
+        <dc:title>The Essays of Adam Smith</dc:title>
+        <dc:creator opf:file-as="Smith, Adam" opf:role="aut">Adam Smith</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2018-12-28T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Ethics</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:20:17.921427+00:00"/>
+        <meta name="calibre:title_sort" content="Essays of Adam Smith, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Essays of Adam Smith, The - Adam Smith.jpg"/>
+    </guide>
+</package>

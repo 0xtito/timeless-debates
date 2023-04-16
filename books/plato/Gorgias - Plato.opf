@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">35</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">be8272b1-ca56-4354-83fb-300874dd07c1</dc:identifier>
+        <dc:title>Gorgias</dc:title>
+        <dc:creator opf:file-as="Plato" opf:role="aut">Plato</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.15.1) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1999-03-02T00:00:00+00:00</dc:date>
+        <dc:language>eng</dc:language>
+        <dc:subject>Classical literature</dc:subject>
+        <dc:subject>Political science -- Early works to 1800</dc:subject>
+        <dc:subject>Ethics -- Early works to 1800</dc:subject>
+        <meta name="calibre:timestamp" content="2023-04-12T15:45:27.486784+00:00"/>
+        <meta name="calibre:title_sort" content="Gorgias"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="Gorgias - Plato.jpg"/>
+    </guide>
+</package>
