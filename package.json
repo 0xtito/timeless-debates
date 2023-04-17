@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "ingest-data": "tsx -r dotenv/config src/utils/ingest-book-data.ts",
+    "ingest-data": "tsx -r dotenv/config src/scripts/ingest-book-data.ts",
     "ingest-context": "tsx -r dotenv/config src/scripts/startContextIngestion.ts",
     "ask-q": "tsx -r dotenv/config src/scripts/philosopherQA.ts"
   },
@@ -34,6 +34,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "serpapi": "^1.1.1",
+    "sharp": "^0.32.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
   },
