@@ -14,6 +14,7 @@ interface ChatInterfaceProps {
   continueExchange: boolean;
   setContinueExchange: React.Dispatch<React.SetStateAction<boolean>>;
   onPromptSubmit: (topic: string, prompt: string) => void;
+  recentMessage: string;
 }
 
 const ChatInterface: React.FC<ChatInterfaceProps> = ({
@@ -21,6 +22,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   continueExchange,
   setContinueExchange,
   onPromptSubmit,
+  recentMessage,
 }) => {
   const [startExchange, setStartExchange] = useState<boolean>(false);
 
@@ -34,7 +36,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
       ) : (
         <Fragment>
           <div className="h-full overflow-y-auto">
-            {messages.map((msg, index) => (
+            {messages.map(({ philosopher, message }, index) => (
               <div
                 key={index}
                 className={`flex ${
@@ -44,8 +46,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                 {index % 2 === 0 ? (
                   <Fragment>
                     <img
-                      src={msg.philosopher.image}
-                      alt={msg.philosopher.name}
+                      src={`/philosophers/images/${philosopher.image}`}
+                      alt={philosopher.name}
                       className="w-10 h-10 rounded-full mr-2 self-end"
                     />
                     <div
@@ -54,12 +56,12 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                       }`}
                     >
                       <span className="text-xs text-gray-300 mb-1">
-                        {msg.philosopher.name}
+                        {philosopher.name}
                       </span>
                       <div
                         className={`bg-gray-700 rounded-lg p-2 rounded-bl-none`}
                       >
-                        <p className="text-white">{msg.message}</p>
+                        <p className="text-white">{message}</p>
                       </div>
                     </div>
                   </Fragment>
@@ -71,17 +73,17 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
                       }`}
                     >
                       <span className="text-xs text-gray-300 mb-1">
-                        {msg.philosopher.name}
+                        {philosopher.name}
                       </span>
                       <div
                         className={`bg-gray-700 rounded-lg p-2 rounded-br-none`}
                       >
-                        <p className="text-white">{msg.message}</p>
+                        <p className="text-white">{message}</p>
                       </div>
                     </div>
                     <img
-                      src={msg.philosopher.image}
-                      alt={msg.philosopher.name}
+                      src={`/philosophers/images/${philosopher.image}`}
+                      alt={philosopher.name}
                       className="w-10 h-10 rounded-full ml-2 self-end"
                     />
                   </Fragment>

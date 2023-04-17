@@ -11,7 +11,6 @@ interface SelectedPhilosophersProps {
 const SelectedPhilosophers: React.FC<SelectedPhilosophersProps> = ({
   selected,
 }) => {
-  console.log(selected);
   return (
     <div className="flex justify-center p-4 space-x-4">
       {selected.map((philosopher, index) => {
@@ -23,7 +22,6 @@ const SelectedPhilosophers: React.FC<SelectedPhilosophersProps> = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: index < 2 ? 1 : 0.3 }}
           >
-            {/* I want this Image to change depending which philosopher is selected  */}
             <Image
               src={`/philosophers/images/${philosopher.image}`}
               alt={philosopher.name}
