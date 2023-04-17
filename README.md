@@ -1,38 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Timeless Debates
 
-## Getting Started
+## Project Summary
 
-First, run the development server:
+Philosophers' Debate is an innovative application that leverages OpenAI, Supabase, Generative Agents, and LangChain to create a dynamic and interactive debate platform featuring 10 of history's most influential philosophers. By integrating each philosopher's public works and an extensive database of knowledge, the application brings these historical figures to life, allowing them to engage in thought-provoking debates on a wide range of topics. Users have the unique opportunity to witness and participate in these debates, gaining a deeper understanding of each philosopher's perspective and their train of thought.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Motivation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The primary motivation behind this project is to explore the potential of generative agents in replicating the thoughts and ideas of historical figures based on their publicly available works. The project also aims to demonstrate the capabilities of Generative agents in navigating vast amounts of information, deciding what to search, and revealing their reasoning process. Ultimately, this project seeks to showcase the power of AI-driven technologies in creating immersive and educational experiences that bridge the gap between the past and the present.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Select two out of ten possible philosophers to engage in a debate.
+- Each philosopher acts as an individual agent with access to their own collection of public works stored in a Supabase vectorstore.
+- Agents have the ability to search the web for relevant information to support their arguments.
+- Users can participate in the debate by asking questions or interjecting with their own thoughts.
+- Witness the train of thought and reasoning process of the generative agents as they engage in the debate.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
