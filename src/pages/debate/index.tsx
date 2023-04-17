@@ -15,7 +15,7 @@ const testMessages = [
       id: 1,
       name: "Adam Smith",
       serverName: "adam-smith",
-      image: "/philosophers/images/adam-smith-Enhanced.jpg",
+      image: "adam-smith-Enhanced.jpg",
     },
     message: "Hello, I am Adam Smith.",
   },
@@ -24,7 +24,7 @@ const testMessages = [
       id: 2,
       name: "Epictetus",
       serverName: "epictetus",
-      image: "/philosophers/images/epictetus-Enhanced.jpg",
+      image: "epictetus-Enhanced.jpg",
     },
     message: "Hello, I am Epictetus.",
   },
@@ -46,20 +46,147 @@ type Data = {
 
 const DebatePage: React.FC<DebatePageProps> = ({ philosophers, redirect }) => {
   const router = useRouter();
-  const [messages, setmessages] = useState<PhilosopherMessage[]>(testMessages);
+  const [messages, setMessages] = useState<PhilosopherMessage[]>([
+    {
+      philosopher: philosophers[0],
+      message: `Hello, I am ${philosophers[0].name}.`,
+    },
+    {
+      philosopher: philosophers[1],
+      message: `Hello, I am ${philosophers[1].name}.`,
+    },
+  ]);
   const [continueExchange, setContinueExchange] = useState<boolean>(true);
   const [initExchange, setInitExchange] = useState<boolean>(false);
-  const [agent1, setAgent1] = useState<AgentExecutor | null>(null);
-  const [agent2, setAgent2] = useState<AgentExecutor | null>(null);
+  const [recentMessage, setRecentMessage] = useState<string>("");
+  const [responseDone, setResponseDone] = useState<boolean>(false);
+  const [next, setNext] = useState<string>("agentOne");
+  const [debateTopic, setDebateTopic] = useState<string>("");
 
   const prompt = useRef<string>("");
   const topic = useRef<string>("");
+
+  const handleInitExchange = async () => {
+    const control = new AbortController();
+    try {
+      await fetchEventSource(`/api/${next}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          philosophers: philosophers.map((p) => p.serverName),
+          topic: topic.current,
+          prompt: prompt.current,
+          chatHistory: [debateTopic, ...messages.map((m) => m.message)],
+        }),
+        signal: control.signal,
+        openWhenHidden: true,
+        onmessage: (event) => {
+          if (topic.current !== "") topic.current = "";
+          if (prompt.current !== "") prompt.current = "";
+          if (event.data === "[DONE]") {
+            console.log("DONE");
+            next === "agentOne" ? setNext("agentTwo") : setNext("agentOne");
+            setResponseDone(true);
+          } else if (event.data === "[START]") {
+            console.log("START");
+            setMessages((prev) => [
+              ...prev,
+              {
+                philosopher: philosophers[0],
+                message: "",
+              },
+            ]);
+          } else {
+            const data: { data?: string; fullMessage?: string } = JSON.parse(
+              event.data
+            );
+            console.log("Message received");
+            console.log(data.fullMessage);
+            if (typeof data.fullMessage === "string") {
+              setMessages((prev) => {
+                prev[prev.length - 1].message = data.fullMessage ?? "";
+                console.log(data.fullMessage);
+                console.log(prev[prev.length - 1]);
+                return [...prev];
+              });
+            }
+          }
+        },
+        onerror: () => {
+          // setLoading(false);
+          console.log("Error from onerror - aborting");
+          control.abort();
+        },
+      });
+    } catch (error) {
+      console.error(`Error handling init exchange: ${error}`);
+    }
+  };
+
+  const handleContinueConvo = async () => {
+    const control = new AbortController();
+    try {
+      await fetchEventSource(`/api/${next}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          philosophers: philosophers.map((p) => p.serverName),
+          chatHistory: [debateTopic, ...messages.map((m) => m.message)],
+        }),
+        signal: control.signal,
+        openWhenHidden: true,
+        onmessage: (event) => {
+          if (event.data === "[DONE]") {
+            console.log("DONE");
+            next === "agentOne" ? setNext("agentTwo") : setNext("agentOne");
+            setResponseDone(true);
+          } else if (event.data === "[START]") {
+            console.log("START");
+            setMessages((prev) => [
+              ...prev,
+              {
+                philosopher:
+                  next === "agentOne" ? philosophers[0] : philosophers[1],
+                message: "",
+              },
+            ]);
+          } else {
+            const data: { data?: string; fullMessage?: string } = JSON.parse(
+              event.data
+            );
+            console.log("Message received");
+            console.log(data.fullMessage);
+            if (typeof data.fullMessage === "string") {
+              setMessages((prev) => {
+                prev[prev.length - 1].message = data.fullMessage ?? "";
+                console.log(data.fullMessage);
+                console.log(prev[prev.length - 1]);
+                return [...prev];
+              });
+            }
+          }
+        },
+        onerror: () => {
+          // setLoading(false);
+          console.log("Error from onerror - aborting");
+          control.abort();
+        },
+      });
+    } catch (error) {
+      console.error(`Error handling continue convo: ${error}`);
+    }
+  };
 
   const onPromptSubmit = (_topic: string, _prompt: string) => {
     console.log("Prompt submitted");
     console.log(`Topic: ${_topic}`);
     topic.current = _topic;
     console.log(`Prompt: ${_prompt}`);
+    setDebateTopic(`The main question of our debate is: ${_prompt}`);
     prompt.current = _prompt;
     setInitExchange(true);
   };
@@ -71,79 +198,114 @@ const DebatePage: React.FC<DebatePageProps> = ({ philosophers, redirect }) => {
   }, [router]);
 
   useEffect(() => {
-    if (!initExchange) return;
-
-    console.log("--- Initiating exchange ---");
-    console.log(`Topic: ${topic.current}`);
-    console.log(`Prompt: ${prompt.current}`);
-
-    const control = new AbortController();
-
-    const handleInitExchange = async () => {
-      const response = await fetch("/api/initExchange", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          philosophers: philosophers.map((p) => p.serverName),
-          topic: topic.current,
-          prompt: prompt.current,
-        }),
-      });
-
-      //   try {
-      //     await fetchEventSource("/api/initExchange", {
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //       body: JSON.stringify({
-      //         philosophers: philosophers.map((p) => p.serverName),
-      //         topic: topic.current,
-      //         prompt: prompt.current,
-      //       }),
-      //       signal: control.signal,
-      //       openWhenHidden: true,
-      //       onmessage: (event) => {
-      //         console.log(event.data);
-      //       },
-      //       onerror: () => {
-      //         // setLoading(false);
-      //         console.log("Error from onerror - aborting");
-      //         control.abort();
-      //       },
-      //     });
-      //   } catch (error) {
-      //     console.error(`Error handling init exchange: ${error}`);
-      //   }
-    };
+    if (initExchange) {
+      handleInitExchange();
+    }
   }, [initExchange]);
 
-  // just for testing
   useEffect(() => {
-    console.clear();
-    console.log(`\n--- Debate Page ---\n`);
-    console.log(philosophers);
+    if (responseDone) {
+      handleContinueConvo();
+      setResponseDone(false);
+    }
+  }, [next]);
 
-    // const getAgents = async () => {
-    //   const agents = await Promise.all([
-    //     createAgent(philosophers[0].serverName, philosophers[1].serverName),
-    //     createAgent(philosophers[1].serverName, philosophers[0].serverName),
-    //   ]);
-    //   if (!agents[0] || !agents[1]) {
-    //     console.error("Error creating agents");
-    //     return;
-    //   }
-    //   console.log("Agents created");
-    //   console.log(agents);
+  // useEffect(() => {
+  //   if (streamDone) {
+  //     console.log("Stream done");
+  //     console.log("Starting agent two");
+  //     const control = new AbortController();
+  //     try {
+  //       fetchEventSource("/api/agentTwo", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify({
+  //           philosophers: philosophers.map((p) => p.serverName),
+  //           topic: topic.current,
+  //           prompt: prompt.current,
+  //           chatHistory: [],
+  //           lastMessage: "",
+  //         }),
+  //         signal: control.signal,
+  //         openWhenHidden: true,
+  //         onmessage: (event) => {
+  //           if (topic.current !== "") topic.current = "";
+  //           if (prompt.current !== "") prompt.current = "";
+  //           if (event.data === "[DONE]") {
+  //             console.log("DONE");
+  //             setMessages((prev) => {
+  //               prev[prev.length - 1].message = recentMessage ?? "";
+  //               return [...prev];
+  //             });
+  //             setStreamDone(true);
+  //           } else if (event.data === "[START]") {
+  //             console.log("START");
+  //             setMessages((prev) => [
+  //               ...prev,
+  //               {
+  //                 philosopher: philosophers[1],
+  //                 message: "",
+  //               },
+  //             ]);
+  //           } else {
+  //             const data: { data?: string; fullMessage?: string } = JSON.parse(
+  //               event.data
+  //             );
+  //             console.log("Message received");
+  //             console.log(data.fullMessage);
+  //             if (typeof data.fullMessage === "string") {
+  //               // setRecentMessage(data.fullMessage);
+  //               // setMessages((prev) => {
+  //               //   const _prev = [...prev];
 
-    //   setAgent1(agents[0]);
-    //   setAgent2(agents[1]);
-    // };
+  //               //   _prev[_prev.length - 1].message = data.fullMessage as string;
+  //               //   return _prev;
+  //               // });
+  //               // set the message of the last message in the array to the full message
+  //               setMessages((prev) => {
+  //                 prev[prev.length - 1].message = data.fullMessage ?? "";
+  //                 console.log(data.fullMessage);
+  //                 console.log(prev[prev.length - 1]);
+  //                 return [
+  //                   ...prev.slice(0, prev.length - 1),
+  //                   {
+  //                     philosopher: philosophers[1],
+  //                     message: data.fullMessage ?? "",
+  //                   },
+  //                 ];
+  //               });
+  //               setStreamDone(true);
+  //             }
+  //             // else {
+  //             //   //   setRecentMessage(data.data ?? "");
 
-    // getAgents();
-  }, []);
+  //             //   setMessages((prev) => {
+  //             //     prev[prev.length - 1].message = data.fullMessage ?? "";
+  //             //     return [...prev];
+  //             //   });
+  //             // }
+  //           }
+  //         },
+  //         onerror: () => {
+  //           // setLoading(false);
+  //           console.log("Error from onerror - aborting");
+  //           control.abort();
+  //         },
+  //       });
+  //     } catch (error) {
+  //       console.error(`Error handling init exchange: ${error}`);
+  //     }
+  //   }
+  // }, [streamDone]);
+
+  // just for testing
+  // useEffect(() => {
+  //   console.clear();
+  //   console.log(`\n--- Debate Page ---\n`);
+  //   console.log(philosophers);
+  // }, []);
 
   return (
     <Fragment>
@@ -152,6 +314,7 @@ const DebatePage: React.FC<DebatePageProps> = ({ philosophers, redirect }) => {
         continueExchange={continueExchange}
         setContinueExchange={setContinueExchange}
         onPromptSubmit={onPromptSubmit}
+        recentMessage={recentMessage}
       />
     </Fragment>
   );
@@ -175,16 +338,29 @@ export const getServerSideProps: GetServerSideProps<{
       },
     };
   }
-  const philosophers = [p1, p2] as string[];
+  if (typeof p1 !== "string" && typeof p2 !== "string") {
+    return {
+      props: {
+        philosophers: [],
+        redirect: {
+          destination: "/",
+          permanent: false,
+        },
+      },
+    };
+  }
 
-  const selectedPhilosophers = philosophersContent.filter((p) => {
-    console.log(p.serverName, philosophers);
-    return philosophers.includes(p.serverName);
+  const philosopher1 = philosophersContent.find((p) => {
+    return p.serverName === p1;
+  });
+
+  const philosopher2 = philosophersContent.find((p) => {
+    return p.serverName === p2;
   });
 
   return {
     props: {
-      philosophers: selectedPhilosophers,
+      philosophers: [philosopher1!, philosopher2!],
     },
   };
 };
