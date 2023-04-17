@@ -26,7 +26,7 @@ async function getUrls(searchTerm: string) {
     tbm: "nws",
     api_key: serpAPIKey,
     location: "United States",
-    num: "12",
+    num: "6",
   } satisfies GoogleParameters;
 
   const result = await getJson("google", params);
@@ -83,6 +83,7 @@ async function extractArticleTexts(urls: string[]) {
  * @returns
  */
 async function ingestContextData(
+  vs: SupabaseVectorStore,
   articleData: FormattedArticleData[],
   embeddings: OpenAIEmbeddings
 ) {
@@ -105,16 +106,19 @@ async function ingestContextData(
 
     const docs = await textSplitter.createDocuments(textData, articleMetaData);
 
-    const vectorStore = new SupabaseVectorStore(embeddings, {
-      client: supabase,
-      tableName: "articles",
-      queryName: "match_documents",
-    });
+    // const vectorStore = await SupabaseVectorStore.fromExistingIndex(
+    //   embeddings,
+    //   {
+    //     client: supabase,
+    //     tableName: "articles",
+    //     queryName: "match_documents",
+    //   }
+    // );
 
     console.log("adding docs to articles vector store");
-    await vectorStore.addDocuments(docs);
+    await vs.addDocuments(docs);
     console.log("added docs to articles vector store");
-    return vectorStore;
+    // return vs;
   } catch (error) {
     throw new Error("Failed to ingest data");
   }
@@ -145,41 +149,45 @@ export class ArticleExtractionTool extends Tool {
   name = "Article Extraction Tool";
 
   description =
-    "Useful when you need to know more about the context of the question. Use this when you need more information about the context. This tool will extract the text from the articles that are relevant to the question. The term to search must either start with, `What is ` or `Who is ` or `When is ` or `Where is ` or `Why is ` or `How is `, depending on what you need to find.";
+    "Useful when you need to know more about the context of the question. Use this when you need to search this internet to find more information about this topic. This tool will extract the text from the articles that are relevant to the question. The text you input into this tool is what will be sent to Google Search, so phrase is to get what you are looking for. The input needs to starts with, `What is ` or `Who is ` or `When is ` or `Where is ` or `Why is ` or `How is `, depending on what you need to find. ";
 
   async _call(text: string) {
+    console.log(`text`, text);
     // check if data is already in the vectorstore
-    const _vs = await SupabaseVectorStore.fromExistingIndex(this.embeddings, {
+    const vs = await SupabaseVectorStore.fromExistingIndex(this.embeddings, {
       client: supabase,
       tableName: "articles",
       queryName: "match_documents",
     });
 
-    const _rawResults = await _vs.similaritySearchWithScore(text, 3);
-    console.log(_rawResults);
+    // console.log(`vs`, vs);
 
-    if (_rawResults.length !== 0) {
-      console.log("some data already in vectorstore");
-      if (_rawResults[0][1] > 0.8) {
-        console.log("data is relevant");
-        const rawResults = await _vs.similaritySearch(text);
+    // const _rawResults = await vs.similaritySearchWithScore(text, 4);
+    // console.log(_rawResults[0][0].metadata);
 
-        const results = rawResults.map((doc) => doc.pageContent).join("\n");
+    // if (_rawResults.length !== 0) {
+    //   console.log("some data already in vectorstore");
+    //   if (_rawResults[0][1] > 0.8) {
+    //     console.log("data is relevant");
 
-        const input = `Here is the context:\n ${results}\n\n 
-        Give me a summary of the context above.
-        `;
+    //     const results = _rawResults
+    //       .map(([doc, score]) => doc.pageContent)
+    //       .join("\n\n");
 
-        const ans = await this.model.generatePrompt([
-          new StringPromptValue(input),
-        ]);
+    //     const input = `Here is the context:\n ${results}\n\n
+    //     Give me a descriptive summary of the context above: \n.
+    //     `;
 
-        return ans.generations[0][0].text;
-        return `Final answer: ${ans.generations[0][0].text}`;
-      } else {
-        console.log("data is not relevant");
-      }
-    }
+    //     const ans = await this.model.generatePrompt([
+    //       new StringPromptValue(input),
+    //     ]);
+
+    //     return ans.generations[0][0].text;
+    //     return `Final answer: ${ans.generations[0][0].text}`;
+    //   } else {
+    //     console.log("data is not relevant");
+    //   }
+    // }
     console.log("need to ingest data");
 
     // call to serpapi to get urls
@@ -188,18 +196,21 @@ export class ArticleExtractionTool extends Tool {
     // extract text from urls with apify
     const data = await extractArticleTexts(urls);
 
-    const vs = await ingestContextData(data, this.embeddings);
+    await ingestContextData(vs, data, this.embeddings);
 
     // const rawResults = await vs.similaritySearchWithScore(text, 4);
-    const rawResults = await vs.similaritySearch(text);
+    const rawResults = await vs.similaritySearch(text, 5);
 
     const results = rawResults.map((doc) => doc.pageContent).join("\n");
 
-    const input = `Here is the context:\n ${results}\n\n 
-    Give me a summary of the context above.
+    const input = `Write a descriptive summary of the following context:\n\n
+    ${results}
+    \nDescriptive Summary: 
     `;
 
     const ans = await this.model.generatePrompt([new StringPromptValue(input)]);
+
+    console.log(ans.generations[0][0].text);
 
     return ans.generations[0][0].text;
 
