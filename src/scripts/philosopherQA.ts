@@ -14,7 +14,9 @@ import { createAgent } from "@/utils/create-custom-agent";
   // const _input = "What do you think about Bitcoin?";
   const _input = "What is the government's role in society?";
 
-  await agent1.call({ input: _input });
+  const res = await agent1.call({ input: _input });
+
+  console.log(res);
 
   //   console.log(`Question for ${philosopher}: ${_input} `);
 

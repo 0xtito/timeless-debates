@@ -41,37 +41,49 @@ async function transformBookData(path: string) {
     ".epub": (path) => new EPubLoader(path),
   });
   const rawdocs = await directoryLoader.load();
-  const docs = rawdocs.map((doc) => {
-    const source = doc.metadata.source as string;
 
-    const author = source
-      .split("/")[8]
-      .split("_")
-      .map((word) => word[0].toUpperCase() + word.slice(1))
-      .join(" ");
+  const docs = rawdocs
+    .filter((doc) => typeof doc.pageContent === "string")
+    .map((doc) => {
+      const source = doc.metadata.source as string;
 
-    const book = doc.metadata.source
-      .split("/")[10]
-      .replace(".epub", "")
-      .replace(/_/g, " ");
+      const author = source
+        .split("/")[8]
+        .split("_")
+        .map((word) => word[0].toUpperCase() + word.slice(1))
+        .join(" ");
 
-    doc.metadata = {
-      author,
-      book,
-    };
-    return doc;
-  });
+      const book = doc.metadata.source
+        .split("/")[10]
+        .replace(".epub", "")
+        .replace(/_/g, " ");
+
+      doc.metadata = {
+        author,
+        book,
+      };
+      return doc;
+    });
   return docs;
 }
 
 async function embedBookData() {
-  let rawBookDocs = [];
+  let rawDocs: Document[] = [];
   for (const path of authorsFilePaths) {
     const docs = await transformBookData(path);
-    rawBookDocs.push(...docs);
+    rawDocs.push(...docs);
   }
-  const textSplitter = new RecursiveCharacterTextSplitter();
-  const docs = await textSplitter.splitDocuments(rawBookDocs);
+  console.log("before text splitter");
+  const textSplitter = new RecursiveCharacterTextSplitter({
+    chunkSize: 2250,
+    chunkOverlap: 300,
+  });
+
+  console.log("after text splitter");
+  console.log("before split documents");
+  const chunkedDocs = await textSplitter.splitDocuments(rawDocs);
+  console.log("chunked docs: ", chunkedDocs.length);
+  console.log("after split documents");
 
   const adamSmithDocs: Document[] = [];
   const epictetusDocs: Document[] = [];
@@ -84,7 +96,7 @@ async function embedBookData() {
   const reneDescartesDocs: Document[] = [];
   const niccoloMachiavelliDocs: Document[] = [];
 
-  docs.forEach((doc) => {
+  chunkedDocs.forEach((doc) => {
     switch (doc.metadata.author) {
       case "Adam Smith":
         adamSmithDocs.push(doc);
